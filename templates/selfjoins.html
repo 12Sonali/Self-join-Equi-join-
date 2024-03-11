@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center>
+        <h1>selfjoins</h1>
+        <table border="5px">
+            <tr>
+                <th>Employee Name</th>
+                <th>Manager</th>
+                <th>Hireadate</th>
+                <th>Commission</th>
+                <th>Job</th>
+                <th>Employee No</th>
+                <th>Dept No</th>
+                <th>Salary</th>
+            </tr>
+            {% for emo in EMPLOYEEMANAGEROBJECT %}
+                <tr>
+                    <td>{{emo.ename}}</td>
+                    <td>{{emo.mgr.ename}}</td>
+                    <td>{{emo.hiredate}}</td>
+                    <td>{{emo.comm}}</td>
+                    <td>{{emo.job}}</td>
+                    <td>{{emo.empno}}</td>
+                    <td>{{emo.deptno.deptno}}</td>
+                    <td>{{emo.sal}}</td>
+                </tr>
+            
+
+            {% endfor %}
+
+
+
+
+
+        </table>
+    </center>
+</body>
+</html>
